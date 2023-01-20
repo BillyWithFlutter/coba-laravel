@@ -29,8 +29,23 @@ Route::get('/about', function () {
 });
 
 
+
 Route::get('/blog', function (){ 
+    $blog_posts = [
+        [
+            "title" => "Judul Post Pertama",
+            'author' => 'Billy',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cupiditate amet asperiores facilis voluptates hic rerum sed excepturi perspiciatis debitis? Dolore in exercitationem id quo impedit, sequi sint reiciendis nulla laborum animi voluptas maxime temporibus ex dolor repellat magni minima aspernatur necessitatibus libero itaque? Id voluptatum laudantium, maiores laborum voluptate vitae reiciendis iusto aperiam, deleniti quae nostrum dolor perspiciatis, excepturi doloribus beatae eius ad nam laboriosam illum quasi impedit asperiores facilis. Quam, nulla. Fugit odio excepturi, totam iure exercitationem eveniet?'
+        ],
+        [
+            "title" => "Judul Post Kedua",
+            'author' => 'Stanly',
+            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum cupiditate amet asperiores facilis voluptates hic rerum sed excepturi perspiciatis debitis? Dolore in exercitationem id quo impedit, sequi sint reiciendis nulla laborum animi voluptas maxime temporibus ex dolor repellat magni minima aspernatur necessitatibus libero itaque? Id voluptatum laudantium, maiores laborum voluptate vitae reiciendis iusto aperiam, deleniti quae nostrum dolor perspiciatis, excepturi doloribus beatae eius ad nam laboriosam illum quasi impedit asperiores facilis. Quam, nulla. Fugit odio excepturi, totam iure exercitationem eveniet?'
+        ],
+    ];
+
     return view('posts', [
         "title" => "Posts",
+        'posts' => $blog_posts
     ]);
 });
